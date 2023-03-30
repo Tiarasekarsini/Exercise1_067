@@ -1,3 +1,4 @@
+import 'package:exercise1_067/home_page.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -24,8 +25,8 @@ class _LoginPageState extends State<LoginPage> {
           children: [
             Image.network(
               'https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png',
-              width: 800,
-              height: 200,
+              width: 400,
+              height: 300,
             ),
             Container(
               padding: const EdgeInsets.only(top: 5),
@@ -76,7 +77,8 @@ class _LoginPageState extends State<LoginPage> {
                             TextFormField(
                               decoration: const InputDecoration(
                                 hintText: "Enter your name",
-                                prefixIcon: Icon(Icons.person, color: Colors.blue),
+                                prefixIcon:
+                                    Icon(Icons.person, color: Colors.blue),
                               ),
                               validator: (value) {
                                 if (value == null || value.isEmpty) {
@@ -90,6 +92,45 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                           ],
                         )),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.only(left: 25),
+                    margin: const EdgeInsets.only(top: 50),
+                    alignment: Alignment.centerLeft,
+                    child: const Text(
+                      'Password',
+                      textAlign: TextAlign.left,
+                      style: TextStyle(
+                          fontSize: 17,
+                          color: Colors.blue,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.only(top: 5),
+                    margin: const EdgeInsets.only(right: 30, left: 30),
+                    child: Form(
+                        child: Column(
+                      children: [
+                        TextFormField(
+                          decoration: const InputDecoration(
+                            hintText: "Enter your password",
+                            prefixIcon: Icon(Icons.lock, color: Colors.blue),
+                          ),
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return "Please enter your password";
+                            } else if (value == password) {
+                              return "password must be at least 6 characters";
+                            }
+                            return null;
+                          },
+                          onSaved: (value) {
+                            name = value;
+                          },
+                        ),
+                      ],
+                    )),
                   ),
                 ],
               ),
