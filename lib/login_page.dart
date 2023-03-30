@@ -128,7 +128,17 @@ class _LoginPageState extends State<LoginPage> {
                           onSaved: (value) {
                             name = value;
                           },
-                        ),
+                        ),ElevatedButton(
+                              child: const Text ('Sign In'),
+                              onPressed:() {
+                                if(_formKey.currentState!.validate()){
+                                  _formKey.currentState!.save();
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage(
+                                    name: name,
+                                    password: password,
+                                  )));
+                                }
+                              },)
                       ],
                     )),
                   ),
