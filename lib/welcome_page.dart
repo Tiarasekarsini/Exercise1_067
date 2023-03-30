@@ -32,6 +32,11 @@ class WelcomePage extends StatelessWidget {
                     )
                   ],
                 ),
+              ),Container(
+                padding: const EdgeInsets.only(top:80),
+                child:Image.network('https://www.pngplay.com/wp-content/uploads/2/Pokeball-PNG-Pic-Background.png',
+                width: 250,
+                height: 250,)
               )
             ],
           ),
