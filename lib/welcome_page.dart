@@ -17,7 +17,7 @@ class WelcomePage extends StatelessWidget {
                 'Pokedex.',
                 style: TextStyle(
                   fontSize: 50,
-                  color: Colors.amber,
+                  color: Colors.amber.shade600,
                   fontWeight: FontWeight.bold,
                 ),
               ),Container(
@@ -39,7 +39,7 @@ class WelcomePage extends StatelessWidget {
                 width: 250,
                 height: 250,)
               ), Container(
-                padding: const EdgeInsets.only(top:90),
+                padding: const EdgeInsets.only(top:140),
                 child: 
                   FloatingActionButton(onPressed: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginPage()));
