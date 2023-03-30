@@ -1,3 +1,4 @@
+import 'package:exercise1_067/login_page.dart';
 import 'package:flutter/material.dart';
 
 class WelcomePage extends StatelessWidget {
@@ -37,7 +38,17 @@ class WelcomePage extends StatelessWidget {
                 child:Image.network('https://www.pngplay.com/wp-content/uploads/2/Pokeball-PNG-Pic-Background.png',
                 width: 250,
                 height: 250,)
-              )
+              ), Container(
+                padding: const EdgeInsets.only(top:90),
+                child: 
+                  FloatingActionButton(onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginPage()));
+                  }, backgroundColor: Colors.amber,
+                  child: const Icon(
+                    Icons.arrow_forward,
+                    color: Colors.white,
+                  ),)
+                )
             ],
           ),
           )
