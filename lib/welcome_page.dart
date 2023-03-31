@@ -47,12 +47,12 @@ class WelcomePage extends StatelessWidget {
                   child: const Icon(
                     Icons.arrow_forward,
                     color: Colors.white,
-                  ),)
+                  ), 
                 )
+              ),
             ],
-          ),
           )
         )
-    );
+    ));
   }
 }
