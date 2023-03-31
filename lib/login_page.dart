@@ -115,10 +115,10 @@ class _LoginPageState extends State<LoginPage> {
                           TextFormField(
                             obscureText: true,
                             decoration: const InputDecoration(
-                              hintText: "Enter your password",
-                              prefixIcon: Icon(Icons.lock, color: Colors.blue),
-                              suffixIcon: Icon(Icons.visibility)
-                            ),
+                                hintText: "Enter your password",
+                                prefixIcon:
+                                    Icon(Icons.lock, color: Colors.blue),
+                                suffixIcon: Icon(Icons.visibility)),
                             validator: (value) {
                               if (value == null || value.isEmpty) {
                                 return "Please enter your password";
@@ -139,7 +139,9 @@ class _LoginPageState extends State<LoginPage> {
                                     child: const Text('Sign In'),
                                     style: ElevatedButton.styleFrom(
                                         minimumSize: Size(double.infinity, 50),
-                                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40))),
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(40))),
                                     onPressed: () {
                                       if (_formKey.currentState!.validate()) {
                                         _formKey.currentState!.save();
@@ -155,39 +157,33 @@ class _LoginPageState extends State<LoginPage> {
                                     },
                                   )
                                 ],
-                              )), Container(
-                                margin: const EdgeInsets.only(top:10),
-                                alignment: Alignment.center,
-                                child: Column(
-                                  children:[
-                                    Text.rich(
-                                      TextSpan(
-                                        text: 'Don\'t have an account?',
+                              )),
+                          Container(
+                            margin: const EdgeInsets.only(top: 10),
+                            alignment: Alignment.center,
+                            child: Column(children: [
+                              Text.rich(TextSpan(
+                                  text: 'Don\'t have an account?',
+                                  style: TextStyle(
+                                      color: Colors.grey.shade600,
+                                      fontWeight: FontWeight.bold),
+                                  children: [
+                                    TextSpan(
+                                        text: '  Sign Up',
                                         style: TextStyle(
-                                          color: Colors.grey.shade600,
-                                          fontWeight: FontWeight.bold),
-                                        children: [
-                                          TextSpan(
-                                            text:'  Sign Up',
-                                            style: TextStyle(
-                                              color: Colors.blue,
-                                              fontWeight: FontWeight.bold
-                                              ),
-                                              recognizer: TapGestureRecognizer()
-                                              ..onTap = (){
-                                                Navigator.push(
-                                                    context,
-                                                    MaterialPageRoute(
-                                                        builder: (context) => RegisterPage()));
-                                              }
-                                    
-                                            )
-                                        ]
-                                      )
-                                    )
-                                  ]
-                                ),
-                              )
+                                            color: Colors.blue,
+                                            fontWeight: FontWeight.bold),
+                                        recognizer: TapGestureRecognizer()
+                                          ..onTap = () {
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        RegisterPage()));
+                                          })
+                                  ]))
+                            ]),
+                          )
                         ],
                       ),
                     )
