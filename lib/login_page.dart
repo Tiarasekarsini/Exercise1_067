@@ -40,7 +40,7 @@ class _LoginPageState extends State<LoginPage> {
                       "Let's get started",
                       style: TextStyle(
                         fontSize: 30,
-                        color: Colors.amber.shade600,
+                        color: Colors.teal,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -67,7 +67,7 @@ class _LoginPageState extends State<LoginPage> {
                         textAlign: TextAlign.left,
                         style: TextStyle(
                             fontSize: 15,
-                            color: Colors.blue,
+                            color: Colors.teal,
                             fontWeight: FontWeight.bold),
                       ),
                     ),
@@ -80,7 +80,7 @@ class _LoginPageState extends State<LoginPage> {
                               decoration: const InputDecoration(
                                 hintText: "Enter your name",
                                 prefixIcon:
-                                    Icon(Icons.person, color: Colors.blue),
+                                    Icon(Icons.person, color: Colors.teal),
                               ),
                               validator: (value) {
                                 if (value == null || value.isEmpty) {
@@ -103,7 +103,7 @@ class _LoginPageState extends State<LoginPage> {
                         textAlign: TextAlign.left,
                         style: TextStyle(
                             fontSize: 15,
-                            color: Colors.blue,
+                            color: Colors.teal,
                             fontWeight: FontWeight.bold),
                       ),
                     ),
@@ -117,7 +117,7 @@ class _LoginPageState extends State<LoginPage> {
                             decoration: const InputDecoration(
                                 hintText: "Enter your password",
                                 prefixIcon:
-                                    Icon(Icons.lock, color: Colors.blue),
+                                    Icon(Icons.lock, color: Colors.teal),
                                 suffixIcon: Icon(Icons.visibility)),
                             validator: (value) {
                               if (value == null || value.isEmpty) {
@@ -138,6 +138,7 @@ class _LoginPageState extends State<LoginPage> {
                                   ElevatedButton(
                                     child: const Text('Sign In'),
                                     style: ElevatedButton.styleFrom(
+                                        backgroundColor: Colors.teal,
                                         minimumSize: Size(double.infinity, 50),
                                         shape: RoundedRectangleBorder(
                                             borderRadius:
@@ -170,7 +171,7 @@ class _LoginPageState extends State<LoginPage> {
                                     TextSpan(
                                         text: '  Sign Up',
                                         style: TextStyle(
-                                            color: Colors.blue,
+                                            color: Colors.teal,
                                             fontWeight: FontWeight.bold),
                                         recognizer: TapGestureRecognizer()
                                           ..onTap = () {

@@ -36,7 +36,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         MaterialPageRoute(
                             builder: (context) => const RegisterPage()));
                   },
-                  backgroundColor: Colors.amber,
+                  backgroundColor: Colors.teal,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10)),
                   child: const Icon(
@@ -64,7 +64,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       style: TextStyle(
                           fontSize: 30,
                           fontWeight: FontWeight.bold,
-                          color: Colors.amber),
+                          color: Colors.teal),
                     ),
                   ],
                 ),
@@ -78,7 +78,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   textAlign: TextAlign.left,
                   style: TextStyle(
                       fontSize: 15,
-                      color: Colors.blue,
+                      color: Colors.teal,
                       fontWeight: FontWeight.bold),
                 ),
               ),
@@ -90,7 +90,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       TextFormField(
                         decoration: const InputDecoration(
                           hintText: "Enter your name",
-                          prefixIcon: Icon(Icons.person, color: Colors.blue),
+                          prefixIcon: Icon(Icons.person, color: Colors.teal),
                         ),
                         validator: (value) {
                           if (value == null || value.isEmpty) {
@@ -115,7 +115,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     textAlign: TextAlign.left,
                     style: TextStyle(
                         fontSize: 15,
-                        color: Colors.blue,
+                        color: Colors.teal,
                         fontWeight: FontWeight.bold),
                   )),
               Container(
@@ -126,7 +126,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       TextFormField(
                         decoration: const InputDecoration(
                           hintText: "Enter your email",
-                          prefixIcon: Icon(Icons.mail, color: Colors.blue),
+                          prefixIcon: Icon(Icons.mail, color: Colors.teal),
                         ),
                         validator: (value) {
                           if (value == null || value.isEmpty) {
@@ -151,7 +151,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     textAlign: TextAlign.left,
                     style: TextStyle(
                         fontSize: 15,
-                        color: Colors.blue,
+                        color: Colors.teal,
                         fontWeight: FontWeight.bold),
                   )),
               Container(
@@ -166,7 +166,7 @@ class _RegisterPageState extends State<RegisterPage> {
                             hintText: "Enter your password",
                             prefixIcon: Icon(
                               Icons.lock,
-                              color: Colors.blue,
+                              color: Colors.teal,
                             ),
                             suffixIcon: Icon(Icons.visibility)),
                         validator: (value) {
@@ -189,7 +189,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   textAlign: TextAlign.left,
                   style: TextStyle(
                       fontSize: 15,
-                      color: Colors.blue,
+                      color: Colors.teal,
                       fontWeight: FontWeight.bold),
                 ),
               ),
@@ -202,7 +202,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         obscureText: true,
                         decoration: const InputDecoration(
                             hintText: "Re-Enter Password",
-                            prefixIcon: Icon(Icons.lock, color: Colors.blue),
+                            prefixIcon: Icon(Icons.lock, color: Colors.teal),
                             suffixIcon: Icon(Icons.visibility)),
                         validator: (value) {
                           if (value == null || value.isEmpty) {
@@ -224,6 +224,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   ElevatedButton(
                     child: const Text('Register'),
                     style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.teal,
                         minimumSize: Size(double.infinity, 50),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(40))),

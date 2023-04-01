@@ -17,7 +17,7 @@ class WelcomePage extends StatelessWidget {
                       'Pokedex.',
                       style: TextStyle(
                         fontSize: 50,
-                        color: Colors.amber.shade600,
+                        color: Colors.teal,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -52,7 +52,7 @@ class WelcomePage extends StatelessWidget {
                                 MaterialPageRoute(
                                     builder: (context) => const LoginPage()));
                           },
-                          backgroundColor: Colors.amber,
+                          backgroundColor: Colors.teal,
                           child: const Icon(
                             Icons.arrow_forward,
                             color: Colors.white,
