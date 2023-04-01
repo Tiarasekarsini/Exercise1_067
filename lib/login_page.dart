@@ -66,7 +66,7 @@ class _LoginPageState extends State<LoginPage> {
                         'Name',
                         textAlign: TextAlign.left,
                         style: TextStyle(
-                            fontSize: 17,
+                            fontSize: 15,
                             color: Colors.blue,
                             fontWeight: FontWeight.bold),
                       ),
@@ -102,7 +102,7 @@ class _LoginPageState extends State<LoginPage> {
                         'Password',
                         textAlign: TextAlign.left,
                         style: TextStyle(
-                            fontSize: 17,
+                            fontSize: 15,
                             color: Colors.blue,
                             fontWeight: FontWeight.bold),
                       ),
@@ -150,7 +150,6 @@ class _LoginPageState extends State<LoginPage> {
                                             MaterialPageRoute(
                                                 builder: (context) => HomePage(
                                                       name: name,
-                                                      password: password,
                                                     )));
                                       }
                                       setState(() {});
